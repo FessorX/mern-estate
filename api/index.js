@@ -1,11 +1,11 @@
-import express from "express";
+import express from 'express';
 import mongoose from 'mongoose';
-import dotenv from "dotenv";
+import dotenv from 'dotenv';
 dotenv.config();
 
 mongoose.connect(process.env.MONGO)
 .then(()=>{
-  console.log("connected to MongoBD")
+  console.log("connected to MONGODB");
 })
 .catch((err)=>{
   console.log(err);
@@ -13,6 +13,6 @@ mongoose.connect(process.env.MONGO)
 
 const app = express();
 
-app.listen(6000, ()=>{
-  console.log("server is running on port 6000!")
-});
+app.listen(2000, ()=>{
+  console.log("connected to server on port 2000");
+})
